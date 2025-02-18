@@ -2,6 +2,7 @@ package com.ecommerce.backend_ecommerce_amazon.dto;
 
 import lombok.Data;
 
+
 @Data
 public class SignupData
 {
