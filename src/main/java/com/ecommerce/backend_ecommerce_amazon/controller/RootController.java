@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class RootController {
-    @GetMapping("/")
+    @GetMapping("/") //initializing the root controller with a welcome message
     public String getMethodName()
     {
         return "Welcome to E-Commerce Backend project";

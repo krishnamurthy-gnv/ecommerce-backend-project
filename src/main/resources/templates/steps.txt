@@ -1,0 +1,42 @@
+Here is the step by step process I followed for creating the Project - ECommerce
+
+Step 01: Create a SpringBoot Project using Spring initializer with the dependecies
+            Spring Web
+            Spring Dev Tools
+            Spring Data JPA
+            Spring validation
+            Postgres Sql
+            Lombok
+            Flyway (db migration)
+            Jackson Core & binding (json)
+
+Step 02: Creata a sql file with the tables needed and save it in the resources -> db -> migration -> V1__create all tables.sql
+
+Step 03: Create a database with your desired name in the Postgres and configure the database in the resources -> application.properties file
+
+Step 04: Configure application.properties file with the JPA and Flyway Migrations settings as well
+
+Step 05: If you want the project with a prefix before all the API configure it by adding a package Configurations and with the class ApiPrefixConfigurations.java which keeps the prefix value befoer all the API paths.
+
+Step 06: Create a package Controller with class RootController.java and initialize the root welcome message
+
+Step 07: Create a class AuthenticationController.java in the Controller package  
+
+******Signup********
+
+Step 08: Signup Process: 
+            Create a function in AuthenticationController.java which serves as the API when the user opts to signup, it has the POST mapping function which is called when the end user fills up the form to signup
+
+Step 09: Create a package  'dto' to save the data operations with the class SignupData.java where we initialize the signupdata for the user with all the fields necessary matching the db.
+
+Step 10: While configuring the signup feature we need to set the notnull and validation features, instead of wrting the message for validation hardcoded lets create a package to keep these validations at one place. 
+    Create a package constants -> class AuthContants.java and configure accordingly
+    create a class GenericConstants.java to set the validations for the general validation messages like email.
+
+Step 11: To handle the Exceptions and display error messages in clear way: 
+    Create a package payloads with class ApiResponses.java and configure with the variables needed to display the error message
+    Create a package Exceptions with class GlobalExceptionHandler.java where we configure all the validation and global exceptions and display them using the ApiResponses class
+
+
+
+            
